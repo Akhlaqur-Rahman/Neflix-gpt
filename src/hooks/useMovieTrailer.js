@@ -48,7 +48,7 @@ const useMovieTrailer = (movieId) => {
 
     const json = await data.json();
 
-    const results = json?.results || []; // ✅ SAFE
+    const results = json?.results || []; 
 
     const filterData = results.filter((video) => video.type === "Trailer");
     const trailer = filterData.length ? filterData[0] : results[0];
@@ -61,7 +61,7 @@ const useMovieTrailer = (movieId) => {
     if (trailerVideo) return;
 
     getMovieVideos();
-  }, [movieId]);
+  }, [movieId,trailerVideo]);
 };
 
 export default useMovieTrailer;

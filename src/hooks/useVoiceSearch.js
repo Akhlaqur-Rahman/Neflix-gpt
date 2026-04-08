@@ -6,7 +6,7 @@ const SpeechRecognition =
 const useVoiceSearch = ({ onResult, onEnd }) => {
   const recognitionRef = useRef(null);
   const [isListening, setIsListening] = useState(false);
-  const [isSupported, setIsSupported] = useState(!!SpeechRecognition);
+  const [isSupported] = useState(!!SpeechRecognition);
 
   useEffect(() => {
     if (!SpeechRecognition) return;
